@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IDI-DUG</title>
+  <script language="javascript"> var width = (screen.width * 0.3); var height = (screen.height * 0.8); window.resizeTo(width, height); window.moveTo(((screen.width - width)), ((screen.height - height))); </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="./js/dug.js"></script>
+  <script src="./js/cryptoJS.js"></script>
+  <script src="./js/activeDirectory.js"></script>
+  <link href="./css/dug.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="bot" />
+  <script>
+    var secrets = $.getJSON("directline.json", function (json) {
+      //console.log( "Dug Secrets are here... Directline is : " + json.directLine);
+    }).always(function (json) {
+      BotChat.App({
+        directLine: { secret: decrypt(secrets.responseJSON.directLine) },
+        user: { id: Cookies.get('aadUser') },
+        bot: { id: 'IDI-DUG' },
+        resize: 'detect',
+        chatTitle: ' '
+      }, document.getElementById("bot"));
+
+      var img = new Image();
+      img.src = 'https://www.principalcdn.com/css/horizon/v2/logo-white-right.svg';
+      var div = document.getElementsByClassName('wc-header');
+      img.onload = function () {
+        div.innerHTML += '<img src="' + img.src + '"/>';
+      };
+      document.getElementsByClassName("wc-header")[0].appendChild(img);
+    });
+  </script>
+</body>
+</html>

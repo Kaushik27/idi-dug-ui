@@ -1,0 +1,30 @@
+{
+  "name": "idi-dug-ui",
+  "version": "1.0.1",
+  "description": "ui for idi-dug chatbot",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kaushik27/idi-dug-ui.git"
+  },
+  "keywords": [
+    "dug",
+    "dug"
+  ],
+  "author": "kmandal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Kaushik27/idi-dug-ui/issues"
+  },
+  "homepage": "https://github.com/Kaushik27/idi-dug-ui#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.0"
+  }
+}

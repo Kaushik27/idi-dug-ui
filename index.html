@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IDI-Disability Underwriting Guideline</title>
+    <script language="javascript">
+        var width = (screen.width * 0.3);
+        console.log(width);
+        var height = (screen.height * 0.8);
+        console.log(height);
+        window.resizeTo(width, height);
+        console.log(screen.width - width);
+        console.log(screen.height - height);
+        window.moveTo(((screen.width - width)), ((screen.height - height)));
+        window.open("./dug.html", "dugWindow",
+            'height=240,width=200,directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no'
+        );
+        window.close();
+    </script>
+</head>
+<body>
+</body>
+</html>
